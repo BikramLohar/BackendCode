@@ -19,7 +19,7 @@ const dataObj = {
 }
 
 app.get('/', function (req, res) {
-    res.send("Hello World")
+    res.send("server is ready")
 })
 app.get('/login', function (req, res) {
     res.send(`<h1>Enter Your Login Details</h1>
