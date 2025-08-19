@@ -22,7 +22,12 @@ app.get('/', function (req, res) {
     res.send("Hello World")
 })
 app.get('/login', function (req, res) {
-    res.send("<h1>Enter Your Login Detaisl</h1>");
+    res.send(`<h1>Enter Your Login Details</h1>
+        <form action="/login" method="POST">
+            <input type="text" name="email" placeholder="Email" required />
+            <input type="password" name="password" placeholder="Password" required />
+            <button type="submit">Login</button>
+        </form>`);
 })
 
 app.get('/about', (req, res) => {
