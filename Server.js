@@ -1,0 +1,44 @@
+require('dotenv').config();
+const express = require('express');
+const app = express();
+const PORT = 4000;
+
+const dataObj = {
+    "employees": [
+        {
+            "id": 1,
+            "name": "Jane Smith",
+            "department": "HR"
+        },
+        {
+            "id": 2,
+            "name": "Bob Johnson",
+            "department": "Engineering"
+        }
+    ]
+}
+
+app.get('/', function (req, res) {
+    res.send("server is ready")
+})
+
+app.get('/login', function (req, res) {
+    res.send(`<h1>Enter Your Login Details</h1>
+        <form action="/login" method="POST">
+            <input type="text" name="email" placeholder="Email" required />
+            <input type="password" name="password" placeholder="Password" required />
+            <button type="submit">Login</button>
+        </form>`);
+})
+
+app.get('/data', (req, res) => {
+    res.json(dataObj)
+})
+
+
+
+
+
+app.listen(process.env.PORT, () => {
+    console.log("Your Backend Is Running")
+})
