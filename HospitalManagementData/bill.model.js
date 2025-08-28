@@ -6,7 +6,8 @@ const billSchema = new mongoose.Schema({
         ref: "Patient"
     },
     treatmentCost: {
-        type: Number
+        type: Number,
+        required: true
     },
     roomCost: { type: Number },
     medicineCost: Number,
