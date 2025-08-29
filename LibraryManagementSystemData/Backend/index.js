@@ -2,17 +2,16 @@ import express from "express"
 import mongoose from "mongoose"
 import cors from "cors"
 
-import { Book } from "../book.model"
-import { Member } from "../member.model"
-import { Loan } from "../loan.model"
+import { Book } from "../book.model.js"
+import { Member } from "../member.model.js"
+import { Loan } from "../loan.model.js"
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
 mongoose.connect("mongodb://localhost:27017/libraryDB", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
+
 }).then(() => console.log("MongoDB is Connected"))
     .catch(err => console.error(err))
 

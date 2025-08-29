@@ -6,7 +6,7 @@ const memberSchema = new mongoose.Schema({
         required: true
     },
     email: {
-        type: string,
+        type: String,
         required: true,
         lowercase: true,
         unique: true
