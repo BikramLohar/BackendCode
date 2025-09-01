@@ -51,6 +51,18 @@ Authors
 
 Categories
 
+🏦 5. Banking Management System
+
+Entities:
+
+Customers
+
+Accounts
+
+Transactions
+
+Card
+
 ⚙️ Tech Stack (if you’re coding)
 
 Node.js / Express (Backend)
