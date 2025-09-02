@@ -9,6 +9,10 @@ const loanSchema = new mongoose.Schema({
         enum: ["Home", "Car", "Personal", "Educational"],
         required: true
     },
+    total_loan_amount: {
+        type: Number,
+        required: true
+    },
     loan_amount: {
         type: Number,
         required: true
